@@ -36,7 +36,7 @@ jobs:
       - name: Forzar Gradle 8.7 (compatibilidad Java 21)
         run: |
           cd android
-          sed -i 's/distributionUrl=.*/distributionUrl=https\\:\\/\\/services.gradle.org\\/distributions\\/gradle-8.7-all.zip/' gradle/wrapper/gradle-wrapper.properties
+          sed -i "s|distributionUrl=.*|distributionUrl=https\\://services.gradle.org/distributions/gradle-8.7-all.zip|" gradle/wrapper/gradle-wrapper.properties
           cat gradle/wrapper/gradle-wrapper.properties
 
       - name: Permisos Gradle
